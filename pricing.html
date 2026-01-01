@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>烘乾電競｜價格方案</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Noto+Sans+TC:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main Style -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Page Style -->
+  <style>
+    body {
+      background:
+        radial-gradient(circle at bottom, rgba(255,170,70,0.08), transparent 60%),
+        linear-gradient(180deg, #070707, #121212);
+      overflow-x: hidden;
+    }
+
+    .page-glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% 15%, rgba(255,160,60,0.05), transparent 65%);
+      z-index: 0;
+    }
+
+    .section {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card {
+      background: rgba(18,18,18,0.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .list {
+      padding-left: 18px;
+      margin: 10px 0 0;
+    }
+
+    .list li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .divider {
+      margin: 36px 0;
+      opacity: 0.35;
+      border-top: 1px solid #fff;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page-glow"></div>
+
+  <!-- 🔥 導覽列：與首頁同步，可互跳 -->
+  <header class="header">
+    <img src="logo.png.jpeg" class="logo glow" alt="烘乾電競 LOGO" />
+
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="pricing.html" class="active">價格方案</a>
+      <a href="reviews.html">客戶好評</a>
+      <a href="assessment.html">電競考核</a>
+      <a href="index.html#contact">聯絡我們</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <section class="section center">
+    <h2 class="metal">💎 價格一覽</h2>
+
+    <!-- 體驗單 -->
+    <div class="card">
+      <h3 class="accent">＿＿＿ 體驗單（新客熱選）＿＿＿</h3>
+      <p class="note">（一個人一個禮拜最多一次）</p>
+      <ul class="list">
+        <li>300 台 – 保 350w</li>
+        <li>350 台 – 保 500w</li>
+        <li><strong>不保撤離率</strong></li>
+      </ul>
+    </div>
+
+    <!-- 護航單（雙） -->
+    <div class="card">
+      <h3 class="accent">＿＿＿ 護航單（雙）＿＿＿</h3>
+      <ul class="list">
+        <li>350 台 – 保 500w</li>
+        <li>450 台 – 保 650w</li>
+        <li>550 台 – 保 750w</li>
+        <li>650 台 – 保 950w</li>
+        <li>750 台 – 保 1250w</li>
+        <li>1100 台 – 保 1800w</li>
+      </ul>
+      <p class="note">
+        機密炸單 3 把補 <strong>30W</strong><br>
+        絕密炸單 3 把補 <strong>80W</strong><br>
+        <strong>不保撤離率</strong>
+      </p>
+    </div>
+
+    <!-- 護航單（單） -->
+    <div class="card">
+      <h3 class="accent">＿＿＿ 護航單（單）＿＿＿</h3>
+      <ul class="list">
+        <li>機密：1 人 1 小時 300 台</li>
+        <li>絕密：1 人 1 小時 400 台</li>
+        <li><strong>不保撤離率</strong></li>
+      </ul>
+    </div>
+
+    <!-- 陪玩單（單） -->
+    <div class="card">
+      <h3 class="accent">＿＿＿ 陪玩單（單）＿＿＿</h3>
+      <ul class="list">
+        <li>機密：1 人 1 小時 200 台</li>
+        <li>絕密：1 人 1 小時 250 台</li>
+        <li><strong>不保撤離率</strong></li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 付款方式 -->
+    <div class="card">
+      <h3 class="accent">🍭 付款方式</h3>
+      <p>
+        先付後打<br>
+        如果有喜歡的打手，請一定要記得提前預約喔。
+      </p>
+    </div>
+
+    <!-- 售後服務 -->
+    <div class="card">
+      <h3 class="accent">⚡ 烘乾售後</h3>
+      <ul class="list">
+        <li>1. 正常強度對局（無外掛）連續炸單 3 次，可申請補單。</li>
+        <li>2. 反應打手態度不佳或私吞物資，更換打手，補體驗單 350 台 – 保 500w。</li>
+        <li>3. 打手狀態不佳要求更換打手，補體驗單 300 台 – 保 350w。</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 烘乾電競 Gaming Club
+  </footer>
+
+</body>
+</html>

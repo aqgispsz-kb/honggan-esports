@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>烘乾電競｜打手考核說明</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Noto+Sans+TC:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      background:
+        radial-gradient(circle at top, rgba(255,200,120,0.08), transparent 60%),
+        linear-gradient(180deg, #070707, #0e0e0e);
+      overflow-x: hidden;
+    }
+
+    .page-glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% 20%, rgba(255,180,80,0.05), transparent 60%);
+      z-index: 0;
+    }
+
+    .section {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card {
+      background: rgba(20, 20, 20, 0.85);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .sub-title {
+      margin-top: 16px;
+      font-weight: 600;
+      color: #f5c46a;
+    }
+
+    .list {
+      padding-left: 18px;
+      margin: 8px 0 14px;
+    }
+
+    .list li {
+      margin-bottom: 6px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page-glow"></div>
+
+  <!-- 🔥 加入導覽列（可互相跳轉） -->
+  <header class="header">
+    <img src="logo.png.jpeg" class="logo glow" alt="烘乾電競 LOGO" />
+
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="pricing.html">價格方案</a>
+      <a href="reviews.html">客戶好評</a>
+      <a href="assessment.html" class="active">電競考核</a>
+      <a href="index.html#contact">聯絡我們</a>
+    </nav>
+  </header>
+
+  <section class="section center">
+    <h2 class="metal">🫵 考核要求</h2>
+
+    <!-- 考核設備 -->
+    <div class="card">
+      <h3 class="accent">考核設備要求</h3>
+      <p>
+        考核必須使用本人自用電腦，確保設備運作熟悉與穩定。<br>
+        因設備問題影響考核結果者，相關責任由本人自行承擔。
+      </p>
+    </div>
+
+    <!-- 考核地圖 -->
+    <div class="card">
+      <h3 class="accent">考核地圖要求</h3>
+      <ul class="list">
+        <li>航天 / 巴克什</li>
+        <li>需熟悉露天刷紅點位與保險位</li>
+      </ul>
+    </div>
+
+    <!-- 考核項目標準 -->
+    <div class="card">
+      <h3 class="accent">考核項目標準</h3>
+
+      <p class="sub-title">🔹 男護</p>
+
+      <p class="sub-title">單考</p>
+      <ul class="list">
+        <li>絕密 3 局取 2 局擊殺數最高</li>
+        <li>累計擊殺 <strong>14 人</strong></li>
+      </ul>
+
+      <p class="sub-title">雙考</p>
+      <ul class="list">
+        <li>絕密 3 局取 2 局擊殺數最高</li>
+        <li>累計擊殺 <strong>16 人</strong></li>
+      </ul>
+
+      <p class="sub-title">🔹 女護</p>
+
+      <p class="sub-title">單考</p>
+      <ul class="list">
+        <li>絕密 3 局取 2 局擊殺數最高</li>
+        <li>累計擊殺 <strong>12 人</strong></li>
+      </ul>
+
+      <p class="sub-title">雙考</p>
+      <ul class="list">
+        <li>絕密 3 局取 2 局擊殺數最高</li>
+        <li>累計擊殺 <strong>16 人</strong></li>
+      </ul>
+    </div>
+
+    <!-- 入職須知 -->
+    <div class="card">
+      <h3 class="accent">📌 烘乾入職須知</h3>
+      <ul class="list">
+        <li>老闆最大，務必保持禮貌並提供情緒價值，嚴禁辱罵或指責老闆。</li>
+        <li>Discord 群組暱稱需掛名「烘乾電競」。</li>
+        <li><strong>「老闆好，我是 XXX，今日為您服務。」</strong></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    © 2025 烘乾電競 Gaming Club
+  </footer>
+
+</body>
+</html>
