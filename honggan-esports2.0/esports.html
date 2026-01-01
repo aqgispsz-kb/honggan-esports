@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電競考核</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: linear-gradient(135deg, #1a1a1a, #333333);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: gold;
+            border-radius: 50%;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>電競考核</h1>
+    <div class="content">
+        <h2>專業電競考核</h2>
+        <p>此處可以放置電競考核相關資訊...</p>
+    </div>
+
+    <script>
+        const particleCount = 80;
+        const particles = [];
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            particle.style.opacity = 0.5 + Math.random() * 0.5;
+            particle.style.width = particle.style.height = (1 + Math.random() * 2) + 'px';
+            document.body.appendChild(particle);
+            particles.push({
+                el: particle,
+                x: parseFloat(particle.style.left),
+                y: parseFloat(particle.style.top),
+                speed: 0.2 + Math.random() * 0.5,
+                drift: (Math.random() - 0.5) * 0.5
+            });
+        }
+
+        function animateParticles() {
+            particles.forEach(p => {
+                p.y += p.speed;
+                p.x += p.drift;
+                if (p.y > window.innerHeight) p.y = -2;
+                if (p.x > window.innerWidth) p.x = 0;
+                if (p.x < 0) p.x = window.innerWidth;
+                p.el.style.top = p.y + 'px';
+                p.el.style.left = p.x + 'px';
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        animateParticles();
+
+        window.addEventListener('resize', () => {
+            particles.forEach(p => {
+                if (p.x > window.innerWidth) p.x = Math.random() * window.innerWidth;
+                if (p.y > window.innerHeight) p.y = Math.random() * window.innerHeight;
+            });
+        });
+    </script>
+</body>
+</html>

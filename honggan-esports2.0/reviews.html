@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>客戶好評與成果展示｜烘乾電競</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Noto+Sans+TC:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .boss-block {
+      max-width: 1100px;
+      margin: 0 auto 60px;
+      padding: 30px 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(15,15,15,0.85);
+      backdrop-filter: blur(6px);
+    }
+
+    .boss-title {
+      font-size: 1.6rem;
+      color: #f5c46a;
+      margin-bottom: 10px;
+    }
+
+    .boss-desc {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .result-grid img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .result-grid img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="particles"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- 🔥 互相串聯的導覽列 -->
+  <header class="header reveal">
+    <img src="logo.png.jpeg" class="logo" alt="烘乾電競 LOGO" />
+    <nav>
+      <a href="index.html">主頁</a>
+      <a href="pricing.html">價格方案</a>
+      <a href="assessment.html">電競考核</a>
+      <a href="reviews.html" class="active">客戶好評</a>
+    </nav>
+  </header>
+
+  <section class="section center reveal">
+    <h1 class="metal">客戶好評與成果展示</h1>
+    <p class="hero-text">
+      實際護航紀錄｜真實撤離成果<br>
+      以下皆為老闆本人對局成果截圖
+    </p>
+  </section>
+
+  <section class="section dark reveal">
+    <div class="boss-block">
+      <div class="boss-title">老闆 A｜航天基地 成功撤離</div>
+
+      <div class="boss-desc">
+        絕密.機密航天基地對局，全程穩定推進路線，<br>
+        成功撤離並帶出高價值物資，收益破千萬。
+      </div>
+
+      <div class="result-grid">
+        <img src="0b835d42-97be-4f37-a43f-1a218b099e8b.webp" alt="航天撤離成果 1">
+        <img src="df1eafcf-5c3e-4e03-baa7-3bfa3b68ad0b.webp" alt="航天撤離成果 2">
+        <img src="36101f10-8e41-4d90-afe9-02381981feb1.webp" alt="航天撤離成果 3">
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer center reveal">
+    © 2025 烘乾電競 Gaming Club
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
