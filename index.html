@@ -13,7 +13,7 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://aqgispsz-kb.github.io/honggan-esports/">
 
-  <!-- Open Graph (FB / LINE / Discord 預覽用) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="烘乾電競｜三角洲行動 陪玩・護航">
   <meta property="og:description" content="專業三角洲陪玩・護航｜安全撤離・穩定配合・不嘴砲。">
   <meta property="og:type" content="website">
@@ -25,6 +25,46 @@
     rel="stylesheet"
   >
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ===== 右側垂直直排導覽 ===== */
+    .right-nav {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: rgba(0,0,0,0.2);
+      padding: 10px 8px;
+      border-radius: 8px 0 0 8px;
+      z-index: 1000;
+    }
+
+    .right-nav a {
+      color: #fff;
+      text-decoration: none;
+      writing-mode: vertical-rl; /* 中文直排 */
+      text-orientation: mixed;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .right-nav a:hover {
+      color: #ffcc00;
+    }
+
+    .right-nav a.active {
+      color: #ff6600;
+    }
+
+    /* 隱藏原本 header nav */
+    header nav {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -33,15 +73,16 @@
 
   <header class="header reveal">
     <img src="logo.png.jpeg" class="logo" alt="烘乾電競 LOGO" />
-
-    <nav>
-      <a href="#services">服務內容</a>
-      <a href="pricing.html">價格方案</a>
-      <a href="reviews.html">客戶好評</a>
-      <a href="assessment.html">電競考核</a>
-      <a href="#contact">聯絡我們</a>
-    </nav>
   </header>
+
+  <!-- ===== 新右側直排導覽 ===== -->
+  <nav class="right-nav">
+    <a href="#services">服務內容</a>
+    <a href="pricing.html">價格方案</a>
+    <a href="reviews.html">客戶好評</a>
+    <a href="assessment.html">電競考核</a>
+    <a href="#contact">聯絡我們</a>
+  </nav>
 
   <section class="hero center reveal">
     <h1 class="metal">烘乾電競</h1>
