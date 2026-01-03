@@ -9,7 +9,7 @@ body {
   font-size: 18px;
 }
 
-/* ⭐ 全站背景（新加入 — 每頁自動套用） */
+/* ⭐ 全站背景 */
 body::before {
   content: "";
   position: fixed;
@@ -43,12 +43,20 @@ body::before {
   padding: 40px 20px;
 }
 
+/* ✅ LOGO（只改透明底） */
 .logo {
-  height: 180px;
-  margin-bottom: 12px;
+  display: block;
+  width: 160px;
+  height: auto;
+  margin: 0 auto 12px;
+  position: relative;
+  z-index: 10; /* 保證浮在背景上 */
+  background: transparent; /* LOGO 無底 */
+  border: none;
+  box-shadow: none;
 }
 
-/* 🔥 右側直立導覽列（唯一新增重點） */
+/* 🔥 右側直立導覽列 */
 .header nav {
   position: fixed;
   right: 24px;
@@ -194,11 +202,13 @@ nav a:hover { opacity: 0.6; }
   transform: translateY(0);
 }
 
-/* 📱 RWD：手機版自動回歸原本橫排 */
+/* 📱 RWD：手機版自動回歸橫排 */
 @media (max-width: 600px) {
   .metal { font-size: 46px; }
   .sub-metal { font-size: 24px; }
   .hero { padding: 130px 20px; }
+
+  .logo { width: 130px; }
 
   .header nav {
     position: static;

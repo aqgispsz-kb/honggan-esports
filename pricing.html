@@ -63,6 +63,44 @@
       font-size: 0.9rem;
       opacity: 0.85;
     }
+
+    /* ===== 右側垂直直排導覽（與首頁完全一致） ===== */
+    .right-nav {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: rgba(0,0,0,0.2);
+      padding: 10px 8px;
+      border-radius: 8px 0 0 8px;
+      z-index: 1000;
+    }
+
+    .right-nav a {
+      color: #fff;
+      text-decoration: none;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .right-nav a:hover {
+      color: #ffcc00;
+    }
+
+    .right-nav a.active {
+      color: #ff6600;
+    }
+
+    /* 隱藏 header nav（與首頁一致） */
+    header nav {
+      display: none;
+    }
   </style>
 </head>
 
@@ -70,24 +108,24 @@
 
   <div class="page-glow"></div>
 
-  <!-- 🔥 導覽列：與首頁同步，可互跳 -->
-  <header class="header">
+  <!-- Header（保留 logo 與 reveal 行為） -->
+  <header class="header reveal">
     <img src="logo.png.jpeg" class="logo glow" alt="烘乾電競 LOGO" />
-
-    <nav>
-      <a href="index.html">首頁</a>
-      <a href="pricing.html" class="active">價格方案</a>
-      <a href="reviews.html">客戶好評</a>
-      <a href="assessment.html">電競考核</a>
-      <a href="index.html#contact">聯絡我們</a>
-    </nav>
   </header>
 
+  <!-- ===== 右側直排導覽（同首頁） ===== -->
+  <nav class="right-nav">
+    <a href="index.html">首頁</a>
+    <a href="pricing.html" class="active">價格方案</a>
+    <a href="reviews.html">客戶好評</a>
+    <a href="assessment.html">電競考核</a>
+    <a href="index.html#contact">聯絡我們</a>
+  </nav>
+
   <!-- Main -->
-  <section class="section center">
+  <section class="section center reveal">
     <h2 class="metal">💎 價格一覽</h2>
 
-    <!-- 體驗單 -->
     <div class="card">
       <h3 class="accent">＿＿＿ 體驗單（新客熱選）＿＿＿</h3>
       <p class="note">（一個人一個禮拜最多一次）</p>
@@ -97,11 +135,9 @@
       </ul>
     </div>
 
-    <!-- 護航單（雙） -->
     <div class="card">
       <h3 class="accent">＿＿＿ 護航單（雙）＿＿＿</h3>
       <ul class="list">
-        <li>350 台 – 保 500w</li>
         <li>450 台 – 保 650w</li>
         <li>550 台 – 保 750w</li>
         <li>650 台 – 保 950w</li>
@@ -109,13 +145,12 @@
         <li>1100 台 – 保 1800w</li>
       </ul>
       <p class="note">
-        機密炸單 3 把補 <strong>30W</strong><br>
-        絕密炸單 3 把補 <strong>80W</strong><br>
+        機密炸單 3 把補 <strong>1單體驗單</strong><br>
+        絕密炸單 3 把補 <strong>2單體驗單</strong><br>
         <strong>不保撤離率</strong>
       </p>
     </div>
 
-    <!-- 護航單（單） -->
     <div class="card">
       <h3 class="accent">＿＿＿ 護航單（單）＿＿＿</h3>
       <ul class="list">
@@ -125,7 +160,6 @@
       </ul>
     </div>
 
-    <!-- 陪玩單（單） -->
     <div class="card">
       <h3 class="accent">＿＿＿ 陪玩單（單）＿＿＿</h3>
       <ul class="list">
@@ -137,7 +171,6 @@
 
     <div class="divider"></div>
 
-    <!-- 付款方式 -->
     <div class="card">
       <h3 class="accent">🍭 付款方式</h3>
       <p>
@@ -146,7 +179,6 @@
       </p>
     </div>
 
-    <!-- 售後服務 -->
     <div class="card">
       <h3 class="accent">⚡ 烘乾售後</h3>
       <ul class="list">
@@ -158,10 +190,10 @@
 
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer center reveal">
     © 2025 烘乾電競 Gaming Club
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

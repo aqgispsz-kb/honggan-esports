@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
+    /* ===== 原本樣式（不動） ===== */
     .boss-block {
       max-width: 1100px;
       margin: 0 auto 60px;
@@ -53,6 +54,67 @@
       transform: scale(1.03);
       box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     }
+
+    /* ===== 右側直排導覽（與首頁一致） ===== */
+    .right-nav {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: rgba(0,0,0,0.2);
+      padding: 10px 8px;
+      border-radius: 8px 0 0 8px;
+      z-index: 1000;
+    }
+
+    .right-nav a {
+      color: #fff;
+      text-decoration: none;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .right-nav a:hover {
+      color: #ffcc00;
+    }
+
+    .right-nav a.active {
+      color: #ff6600;
+    }
+
+    /* 隱藏 header 原 nav（不刪） */
+    header nav {
+      display: none;
+    }
+
+    /* ===== 圖片放大 Lightbox ===== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 20px;
+    }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
   </style>
 </head>
 
@@ -61,16 +123,19 @@
   <div id="particles"></div>
   <div class="bg-overlay"></div>
 
-  <!-- 🔥 互相串聯的導覽列 -->
+  <!-- Header（保留 reveal 與 logo） -->
   <header class="header reveal">
     <img src="logo.png.jpeg" class="logo" alt="烘乾電競 LOGO" />
-    <nav>
-      <a href="index.html">主頁</a>
-      <a href="pricing.html">價格方案</a>
-      <a href="assessment.html">電競考核</a>
-      <a href="reviews.html" class="active">客戶好評</a>
-    </nav>
   </header>
+
+  <!-- 右側直排導覽 -->
+  <nav class="right-nav">
+    <a href="index.html">首頁</a>
+    <a href="pricing.html">價格方案</a>
+    <a href="reviews.html" class="active">客戶好評</a>
+    <a href="assessment.html">電競考核</a>
+    <a href="index.html#contact">聯絡我們</a>
+  </nav>
 
   <section class="section center reveal">
     <h1 class="metal">客戶好評與成果展示</h1>
@@ -85,14 +150,14 @@
       <div class="boss-title">老闆 A｜航天基地 成功撤離</div>
 
       <div class="boss-desc">
-        絕密.機密航天基地對局，全程穩定推進路線，<br>
+        絕密．機密航天基地對局，全程穩定推進路線，<br>
         成功撤離並帶出高價值物資，收益破千萬。
       </div>
 
       <div class="result-grid">
-        <img src="0b835d42-97be-4f37-a43f-1a218b099e8b.webp" alt="航天撤離成果 1">
-        <img src="df1eafcf-5c3e-4e03-baa7-3bfa3b68ad0b.webp" alt="航天撤離成果 2">
-        <img src="36101f10-8e41-4d90-afe9-02381981feb1.webp" alt="航天撤離成果 3">
+        <img src="0b835d42-97be-4f37-a43f-1a218b099e8b.webp" alt="航天撤離成果">
+        <img src="df1eafcf-5c3e-4e03-baa7-3bfa3b68ad0b.webp" alt="航天撤離成果">
+        <img src="36101f10-8e41-4d90-afe9-02381981feb1.webp" alt="航天撤離成果">
       </div>
     </div>
   </section>
@@ -101,7 +166,30 @@
     © 2025 烘乾電競 Gaming Club
   </footer>
 
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="放大圖片">
+  </div>
+
   <script src="script.js"></script>
+
+  <!-- 圖片放大 JS（不影響原 script.js） -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('.result-grid img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    });
+  </script>
 
 </body>
 </html>
