@@ -19,9 +19,7 @@
   <!-- Main Style -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Page Style -->
   <style>
-    /* ===== 原本樣式（不動） ===== */
     .boss-block {
       max-width: 1100px;
       margin: 0 auto 60px;
@@ -62,7 +60,6 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     }
 
-    /* ===== 右側直排導覽（與首頁一致） ===== */
     .right-nav {
       position: fixed;
       top: 50%;
@@ -81,10 +78,8 @@
       color: #fff;
       text-decoration: none;
       writing-mode: vertical-rl;
-      text-orientation: mixed;
       font-weight: bold;
       font-size: 14px;
-      transition: color 0.3s;
     }
 
     .right-nav a:hover {
@@ -95,12 +90,10 @@
       color: #ff6600;
     }
 
-    /* 隱藏 header 原 nav（不刪） */
     header nav {
       display: none;
     }
 
-    /* ===== 圖片放大 Lightbox ===== */
     .lightbox {
       position: fixed;
       inset: 0;
@@ -116,7 +109,6 @@
       max-width: 100%;
       max-height: 90vh;
       border-radius: 12px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
     }
 
     .lightbox.active {
@@ -130,12 +122,10 @@
   <div id="particles"></div>
   <div class="bg-overlay"></div>
 
-  <!-- Header（保留 reveal 與 logo） -->
   <header class="header reveal">
     <img src="logo.png.jpeg" class="logo" alt="烘乾電競 LOGO" />
   </header>
 
-  <!-- 右側直排導覽 -->
   <nav class="right-nav">
     <a href="index.html">首頁</a>
     <a href="pricing.html">價格方案</a>
@@ -152,19 +142,66 @@
     </p>
   </section>
 
+  <!-- 老闆 A -->
   <section class="section dark reveal">
     <div class="boss-block">
       <div class="boss-title">老闆 A｜航天基地 成功撤離</div>
-
       <div class="boss-desc">
         絕密．機密航天基地對局，全程穩定推進路線，<br>
         成功撤離並帶出高價值物資，收益破千萬。
       </div>
 
       <div class="result-grid">
-        <img src="0b835d42-97be-4f37-a43f-1a218b099e8b.webp" alt="航天撤離成果">
-        <img src="df1eafcf-5c3e-4e03-baa7-3bfa3b68ad0b.webp" alt="航天撤離成果">
-        <img src="36101f10-8e41-4d90-afe9-02381981feb1.webp" alt="航天撤離成果">
+        <img src="0b835d42-97be-4f37-a43f-1a218b099e8b.webp">
+        <img src="df1eafcf-5c3e-4e03-baa7-3bfa3b68ad0b.webp">
+        <img src="36101f10-8e41-4d90-afe9-02381981feb1.webp">
+      </div>
+    </div>
+  </section>
+
+  <!-- 老闆 B -->
+  <section class="section dark reveal">
+    <div class="boss-block">
+      <div class="boss-title">老闆 B｜航天基地 高額收益撤離</div>
+      <div class="boss-desc">
+        航天基地高風險對局，全程精準路線控管，<br>
+        成功撤離並帶出大量高價值裝備，單局收益破四百萬以上。
+      </div>
+
+      <div class="result-grid">
+        <img src="photo_2026-01-07_19-50-13.jpg">
+        <img src="photo_2026-01-07_19-50-00.jpg">
+      </div>
+    </div>
+  </section>
+
+  <!-- 老闆 C -->
+  <section class="section dark reveal">
+    <div class="boss-block">
+      <div class="boss-title">老闆 C｜航天基地 高額收益撤離</div>
+      <div class="boss-desc">
+        航天基地實戰撤離，全程穩定壓制與物資控管，<br>
+        成功帶出大量高價值戰利品，收益表現亮眼。
+      </div>
+
+      <div class="result-grid">
+        <img src="photo_2026-01-07_19-56-51.jpg">
+        <img src="photo_2026-01-07_19-56-42.jpg">
+      </div>
+    </div>
+  </section>
+
+  <!-- 老闆 D -->
+  <section class="section dark reveal">
+    <div class="boss-block">
+      <div class="boss-title">老闆 D｜航天基地 超高額收益撤離</div>
+      <div class="boss-desc">
+        航天基地高風險實戰對局，全程穩定清線與資源控場，<br>
+        成功撤離並帶出頂級裝備，單局行動收益突破兩千萬。
+      </div>
+
+      <div class="result-grid">
+        <img src="photo_2026-01-07_20-12-02.jpg">
       </div>
     </div>
   </section>
@@ -173,14 +210,12 @@
     © 2025 烘乾電競 Gaming Club
   </footer>
 
-  <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
-    <img src="" alt="放大圖片">
+    <img src="">
   </div>
 
   <script src="script.js"></script>
 
-  <!-- 圖片放大 JS（不影響原 script.js） -->
   <script>
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = lightbox.querySelector('img');
