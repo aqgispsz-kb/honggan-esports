@@ -15,7 +15,6 @@
   <!-- Main Style -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Page Style -->
   <style>
     body {
       background:
@@ -41,22 +40,45 @@
       background: rgba(18,18,18,0.88);
       backdrop-filter: blur(8px);
       border: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 28px;
+    }
+
+    /* ===== 價格海報樣式（重點） ===== */
+    .poster-card {
+      padding: 18px;
+    }
+
+    .price-poster {
+      width: 100%;
+      max-width: 880px; /* 桌機明顯放大 */
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow:
+        0 0 35px rgba(255,120,40,0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.06);
+    }
+
+    @media (max-width: 768px) {
+      .price-poster {
+        max-width: 100%;
+      }
+    }
+
+    .divider {
+      margin: 42px 0;
+      opacity: 0.35;
+      border-top: 1px solid #fff;
     }
 
     .list {
       padding-left: 18px;
-      margin: 10px 0 0;
+      margin-top: 10px;
     }
 
     .list li {
       margin-bottom: 8px;
       line-height: 1.6;
-    }
-
-    .divider {
-      margin: 36px 0;
-      opacity: 0.35;
-      border-top: 1px solid #fff;
     }
 
     .note {
@@ -121,51 +143,22 @@
   <section class="section center reveal">
     <h2 class="metal">💎 價格一覽</h2>
 
-    <!-- 體驗單 -->
-    <div class="card">
-      <h3 class="accent">＿＿＿ 體驗單 ＿＿＿</h3>
-      <p class="note">（一個人一個禮拜最多一次）</p>
-      <ul class="list">
-        <li>350 台 – 保 650w</li>
-      </ul>
-      <p class="note">僅機密地圖</p>
+    <!-- 價格海報 1 -->
+    <div class="card poster-card">
+      <img
+        src="價格海報1.jpg"
+        alt="烘乾電競 價格方案 海報一"
+        class="price-poster"
+      />
     </div>
 
-    <!-- 護航單（雙） -->
-    <div class="card">
-      <h3 class="accent">＿＿＿ 護航單（雙）＿＿＿</h3>
-      <ul class="list">
-        <li>350 台 – 保 500w</li>
-        <li>450 台 – 保 650w</li>
-        <li>550 台 – 保 750w</li>
-        <li>650 台 – 保 950w</li>
-        <li>750 台 – 保 1250w</li>
-        <li>1100 台 – 保 1800w</li>
-      </ul>
-      <p class="note">
-        機密炸單 1 把補 30w<br>
-        絕密炸單 1 把補 80w
-      </p>
-    </div>
-
-    <!-- 護航單（單） -->
-    <div class="card">
-      <h3 class="accent">＿＿＿ 護航單 ＿＿＿</h3>
-      <ul class="list">
-        <li>機密：1 人 1 小時 300 台</li>
-        <li>絕密：1 人 1 小時 400 台</li>
-      </ul>
-      <p class="note">（以上絕密不保撤離率）</p>
-    </div>
-
-    <!-- 陪玩單 -->
-    <div class="card">
-      <h3 class="accent">＿＿＿ 陪玩單 ＿＿＿</h3>
-      <ul class="list">
-        <li>機密：1 人 1 小時 200 台</li>
-        <li>絕密：1 人 1 小時 250 台</li>
-      </ul>
-      <p class="note">（不保撤離率）</p>
+    <!-- 價格海報 2 -->
+    <div class="card poster-card">
+      <img
+        src="價格海報2.png"
+        alt="烘乾電競 價格方案 海報二"
+        class="price-poster"
+      />
     </div>
 
     <div class="divider"></div>
@@ -183,12 +176,13 @@
       </p>
     </div>
 
+    <!-- 售後 -->
     <div class="card">
       <h3 class="accent">⚡ 烘乾售後</h3>
       <ul class="list">
-        <li>1. 正常強度對局（無外掛）連續炸單 3 次，可申請補單。</li>
-        <li>2. 反應打手態度不佳或私吞物資，更換打手，補體驗單 350 台 – 保 500w。</li>
-        <li>3. 打手狀態不佳要求更換打手，補體驗單 300 台 – 保 350w。</li>
+        <li>正常強度對局（無外掛）連續炸單 3 次，可申請補單。</li>
+        <li>打手態度不佳或私吞物資，更換打手，補體驗單。</li>
+        <li>打手狀態不佳要求更換打手，提供補單方案。</li>
       </ul>
     </div>
 
